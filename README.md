@@ -67,7 +67,7 @@ For our retirement data above, we can see that the value 54 appears most frequen
 If two (or more) values occur with the same frequency in a dataset, both (or all) of the items are considered the mode of the data and the data set is **multimodal**. (Multimodality and its impact data analysis will be discussed later in the course.)
 
 
-### Histograms 
+### Histograms and Central Tendency
 
 We have already seen how to draw histograms for a given set of values. Histograms can also be used as an additional aid to help decide between different measures of central tendency. 
 
@@ -90,6 +90,27 @@ plt.show()
 Here we can see that the we can see that mean value i.e. 56.6 do not fully reflect the typical behavior of this particular data if we wanted to use this as a representative figure for retirement age. The median i.e. 57 also fails to represent the general tendency found in this dataset. The mode, i.e. 54 shows the most frequency value which could be used as a representative value. Such decisions, however, are subjective and may differ based on the analytical question asked. For this example, average or median may still be used to reflect the overall range of values present in the dataset. 
 
 Try putting in the values for weight dataset and see what you think of the histogram. Also try changing the bin size and see if it helps you better understand the distribution of underlying data.  
+
+#### Outliers and measures of central tendency
+
+Outliers are extreme, or unusual data value(s) that are notably different from the rest of the data. It is important to detect outliers within a distribution, because they can alter the results of the data analysis. The mean is more sensitive to the existence of outliers than the median or mode. 
+
+Let's look again at our retirement dataset, but with one difference; the last observation of 60 years has been replaced with a retirement age of 81 years. 
+
+```
+54, 54, 54, 55, 56, 57, 57, 58, 58, 60, **81**
+```
+
+The new value is unusual as it is much higher than the other values, and hence considered an *outlier*. 
+
+As the all values are included in the calculation of the mean, the outlier will influence the mean value. 
+
+```
+ 54+54+54+55+56+57+57+58+58+60+81 = 644 divided by 11 = 58.5 years
+```
+So we see that In this distribution the outlier value has increased the mean value. However, it has not changed the middle of the distribution, and therefore the median value is still 57 years. 
+
+Despite the existence of outliers in a distribution, the mean can still be an appropriate measure of central tendency, especially if the rest of the data is normally distributed. If the outlier is confirmed as a valid extreme value, it should treated accordingly. 
 
 ### Summary
 
