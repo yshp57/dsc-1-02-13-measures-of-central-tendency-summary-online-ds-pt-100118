@@ -12,11 +12,11 @@ When we are work with a small set of data values, it is often possible to discus
 
 In this lesson, we shall look at such measures first for a single data variable. e.g.,  the salary of workers in a particular factory. These measures will include measures of central tendency and measures of dispersion (in the following lesson). 
 
-The term *Central Tendency* or a *Measure of central tendency* is the **typical** or **central** value for a data distribution. It is also commonly known as just the *Centre* the distribution. 
+The term *Central Tendency* or a *Measure of central tendency* is the **typical** or **central** value for a data distribution. It is also commonly known as just the *Center* the distribution. 
 
-> **A measure of Central Tendency points the data scientist towards a centralized, repeated or average value**
+> **A measure of Central Tendency points the data scientist towards a centralized, repeated or average value in a given data set**
 
-In data analysis, central tendency is commonly used as a summary measure that attempts to describe a whole set of data with a single value to represents the centre of its distribution.
+In data analysis, central tendency is commonly used as a summary measure that attempts to describe a whole set of data with a single value to represents the center of its distribution.
 
 There are three main measures of central tendency: the mean, the median and the mode. Each of these measures describes a different way of indicating the typical or central value in the data as we shall wee below. 
 
@@ -80,6 +80,7 @@ For the sample data above, let's draw histogram for retirement ages
 import matplotlib.pyplot as plt
 x = [54, 54, 54, 55, 56, 57, 57, 58, 58, 60, 60]
 plt.hist(x, bins=5)
+plt.title("Retirement Ages")
 plt.show()
 ```
 
@@ -89,7 +90,26 @@ plt.show()
 
 Here we can see that the we can see that mean value i.e. 56.6 do not fully reflect the typical behavior of this particular data if we wanted to use this as a representative figure for retirement age. The median i.e. 57 also fails to represent the general tendency found in this dataset. The mode, i.e. 54 shows the most frequency value which could be used as a representative value. Such decisions, however, are subjective and may differ based on the analytical question asked. For this example, average or median may still be used to reflect the overall range of values present in the dataset. 
 
+> In a histogram, you can always visually locate the bin where most of the values occur (as peaks). Thats the concept that a measure of central tendency attempts to represent as a number.
+
 Try putting in the values for weight dataset and see what you think of the histogram. Also try changing the bin size and see if it helps you better understand the distribution of underlying data.  
+
+### Histogram Shape and Measures of Central Tendency
+
+#### Symmetrical distributions
+
+For symmetric distributions, the mode, median and mean are all in the middle of the distribution. The following histogram shows a larger retirement age dataset with a distribution which is symmetrical. All central measures in this case are equal to 58 years.
+
+![](sym.gif)
+
+#### Skewed distributions
+
+A non-symmetrical distribution is called a "skewed distribution". For skewed distribution, the mode and median remain unchanged, but the mean generally moves in the direction of the tails. For such distributions, the median is often a preferred measure of central tendency, as the mean does not clearly reflect the central tendency. BAsed on the direction of mean's movement, such distributions can be further categorized as positively or negatively skewed distributions as shown below:
+
+![](pskew.gif)
+![](nskew.gif)
+
+While performing analytical tasks, skewed distributions need special treatment at times. We shall look deeper into this later during the course. 
 
 #### Outliers and measures of central tendency
 
