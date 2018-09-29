@@ -24,9 +24,11 @@ There are three main measures of central tendency: the mean, the median and the 
 **Mean** or **Arithmatic Average** is the value obtained by dividing the sum of all the data by the total number of data points as shown in the formula below:
 ![](https://www.biologyforlife.com/uploads/2/2/3/9/22392738/mean_orig.png)
 
-Yes, we're using the dreaded "mathematical notation". It's OK. It's just a concise way to write things down. It's along (along with long, confusion model names like "Recurrent Neural Networks") one of the ways that data scientists make so much money. The math and the long words scare people away from ideas that are actually pretty straightforward!
+> Yes, we're using the dreaded "mathematical notation". It's OK. It's just a concise way to write things down. It's along (along with long, confusion model names like "Recurrent Neural Networks") one of the ways that data scientists make so much money. The math and the long words scare people away from ideas that are actually pretty straightforward!
 
 So if you're a math whiz, great. If not, take a little time to look at an unpack the formulae we show in this course. Over time it'll become second nature and that's going to be really important as a practicing data scientist.
+
+Lets start with the $\bar{x}$ (x-bar) - the bar over the top just means "take the absolute value". What does that mean? If there is a minus sign, ignore it. So the absolute value of 3 is 3. The absolute value of -4 is 4. The absolute value of -2.5 is 2.5, and so on.
 
 The mean value, shown as $\bar{x}$ (x-bar) for a vector $X$ is achieved by adding together all values of $X$ (shown as as $\sum{X}$),  and dividing $N$ (Number of observations).
 e.g. Let’s look at a very simple set of data representing the retirement age of 11 individuals
@@ -44,15 +46,15 @@ The mean value is calculated as The mean is calculated as:
 623/11 = 56.6
 ```
 
-For most people the "mean" is what they think of as the default average. If I got paid $20k and you got paid $40k last year our "average" salary was $30,000.
+For most people the "mean" is what they think of as the "average". If I got paid \$20k and you got paid \$40k last year our "average" salary was \$30,000.
 
 ### Median
 
-Median, in addition to mean is another measure of central tendency which refers to the data situated at exactly the middle location of the distribution.
+The median is another measure of central tendency. It refers to the data situated at exactly the middle location of the distribution.
 
-In a set with odd number of data points the median is exactly the middle value. In our retirement data above, as we have 11 values, we can pick the 6th value (57) to be our median.
+In a set with an odd number of data points the median is the middle value. So the median of 2, 4, 12 is 4. In our retirement data above, as we have 11 values, we can pick the 6th value (57) to be our median.
 
-If the number of data points is even then the median is the average of the two middle items. Let's look at this dataset for average weight of 10 individuals:
+If the number of data points is even then the median is the average (mean) of the two middle items. Let's look at this dataset for average weight of 10 individuals:
 ```
 55, 56, 56, 58, 60, 61, 63, 64, 70, 78
 ```
@@ -62,19 +64,19 @@ So here, for the even number of observations (i.e. 10), the median would be calc
 Median = (60 + 61)/2 = 60.5
 ```
 
-Why might we want this? Well imagine there are 10 people sitting in a bar. All of them make \$50k a year. A hedge fund manager comes in who makes \$20m a year. The "average" (mean) salary of people in the bar is now just over \$1.86m a year! It is true, but it might be misleading if you asked any of the first 10 people to loan you \$500k!
+Why might we want to use the median instead of the mean? Well imagine there are 10 people sitting in a bar. All of them make \$50k a year. A hedge fund manager comes in who makes \$20m a year. The "average" (mean) salary of people in the bar is now just over \$1.86m a year! It is true, but it might be misleading if you relied on that data to ask any of the first 10 people to loan you \$500k!
 
-So medians are particularly useful for data sets where there are a number of significant outliers (like the hedge fund managers salary) and you want to get a sense of a "representative" wage. If we looked at the median salary in the bar, it'd still be \$50k even with the hedge fund manager. It'd be a little misleading for that one person but would give you a better sense of the kind of salary that most people in the bar made.
+So medians are particularly useful for data sets where there are a number of significant outliers (like the hedge fund managers salary) and you want to get a sense of a "representative" measure of centrality. If we looked at the median salary in the bar, it'd still be \$50k even with the hedge fund manager. It'd be a little misleading for that one person but would give you a better sense of the kind of salary that most people in the bar made.
 
 ### Mode
 
-A Mode refers the data value that occurs most frequently in a given data set. Hence, it uses the frequency (repetition) of a certain value to be a representative of central tendency of data. 
+The Mode refers to the data value that occurs most frequently in a given data set. Hence, it uses the frequency (repetition) of a certain value to be a representative of central tendency of data. 
 
 For our retirement data above, we can see that the value 54 appears most frequently (i.e. 3 times). So the mode value for retirement age , based on our data , would be 54 years. Similarly for the weight data, the value 56 appears more frequently than the rest and hence would be considered a mode for this data.  
 
 If two (or more) values occur with the same frequency in a dataset, both (or all) of the items are considered the mode of the data and the data set is **multimodal**. (Multimodality and its impact data analysis will be discussed later in the course.)
 
-The mode is particularly useful for categorical data (data grouped into categories) and is often used for filling in missing data in a messy data set. However, it's important to look at a plot of the distribution of data before using the mode to represent the "average" value as sometimes the most popular category will not be centrally positioned.
+The mode is particularly useful for categorical data (data grouped into categories) and is often used for filling in missing data in a messy data set. However, it's important to look at a plot of the distribution of data before using the mode to represent centrality as sometimes the most popular category will not be centrally positioned.
 
 ### Histograms and Central Tendency
 
@@ -143,4 +145,4 @@ Despite the existence of outliers in a distribution, the mean can still be an ap
 
 ### Summary
 
-In this lesson, we looked at the measures used for identifying the central tendency of a given dataset. These measures will be used throughout our data analysis journey and with practice, we shall learn to see how we can choose one (or more) of these measures to represent datasets with a multitude of distributions. 
+In this lesson, we looked three measures that can be used to identify the central tendency of a given dataset. These measures will be used throughout our data analysis journey and with practice, we shall learn to see how we can choose one (or more) of these measures to represent different datasets with different characteristics.
