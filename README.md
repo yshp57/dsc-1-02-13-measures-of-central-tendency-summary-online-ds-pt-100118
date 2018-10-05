@@ -28,7 +28,7 @@ There are three main measures of central tendency: the mean, the median and the 
 
 So if you're a math whiz, great. If not, take a little time to look at an unpack the formulae we show in this course. Over time it'll become second nature and that's going to be really important as a practicing data scientist.
 
-Lets start with the $\bar{x}$ (x-bar) - the bar over the top just means "take the absolute value". What does that mean? If there is a minus sign, ignore it. So the absolute value of 3 is 3. The absolute value of -4 is 4. The absolute value of -2.5 is 2.5, and so on.
+Lets start with the $\bar{x}$ (x-bar) - the bar over the top just means "this is the mean". 
 
 The mean value, shown as $\bar{x}$ (x-bar) for a vector $X$ is achieved by adding together all values of $X$ (shown as as $\sum{X}$),  and dividing $N$ (Number of observations).
 e.g. Let’s look at a very simple set of data representing the retirement age of 11 individuals
@@ -36,7 +36,7 @@ e.g. Let’s look at a very simple set of data representing the retirement age o
 54, 54, 54, 55, 56, 57, 57, 58, 58, 60, 60
 ```
 
-The mean value is calculated as The mean is calculated as: 
+The mean value is calculated as: 
 1.  Adding together all the values 
 ```
 54+54+54+55+56+57+57+58+58+60+60 = 623 
